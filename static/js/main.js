@@ -132,7 +132,7 @@
   document.querySelector(".count-box-link").addEventListener("click", function(e) {
     e.preventDefault();
     document.querySelector("#portfolio").scrollIntoView({ behavior: "smooth" });
-});
+  });
 
 
   /**
@@ -154,20 +154,28 @@
   /**
    * Skills animation
    */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
-
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript Loaded!");
+  
+    let skillsContent = document.querySelector('.skills-content');
+  
+    if (skillsContent) {
+      new Waypoint({
+        element: skillsContent,
+        offset: '80%',
+        handler: function (direction) {
+          let progressBars = document.querySelectorAll('.progress-bar'); // Select all progress bars
+          console.log("Progress Bars Found:", progressBars.length);
+          progressBars.forEach((bar) => {
+            let value = bar.getAttribute('aria-valuenow'); // Get the percentage
+            console.log("Setting width for:", bar, "to:", value + "%"); // Log each bar
+            bar.style.width = value + "%"; // Apply the width
+          });
+        }
+      });
+    }
+  });
+  
   /**
    * Porfolio isotope and filter
    */

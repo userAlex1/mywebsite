@@ -126,6 +126,16 @@
   });
 
   /**
+   * journey
+   */
+
+  document.querySelector(".count-box-link").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector("#portfolio").scrollIntoView({ behavior: "smooth" });
+});
+
+
+  /**
    * Hero type effect
    */
   const typed = select('.typed')
@@ -144,22 +154,19 @@
   /**
    * Skills animation
    */
-  let skillsContent = document.querySelector('.skills-content');
-  if (skillsContent) {
-      new Waypoint({
-          element: skillsContent,
-          offset: '80%',
-          handler: function(direction) {
-              console.log("Waypoint triggered!"); // Debugging log
-              let progressBars = document.querySelectorAll('.progress .progress-bar');
-              progressBars.forEach((bar) => {
-                  bar.style.width = bar.getAttribute('aria-valuenow') + '%';
-              });
-          }
-      });
+  let skilsContent = select('.skills-content');
+  if (skilsContent) {
+    new Waypoint({
+      element: skilsContent,
+      offset: '80%',
+      handler: function(direction) {
+        let progress = select('.progress .progress-bar', true);
+        progress.forEach((el) => {
+          el.style.width = el.getAttribute('aria-valuenow') + '%'
+        });
+      }
+    })
   }
-  
-
 
   /**
    * Porfolio isotope and filter
