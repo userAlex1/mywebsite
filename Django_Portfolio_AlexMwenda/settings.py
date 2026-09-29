@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-85t%)xy5tujn&^s3t2(9$c261e^%o)_9d(sk0d78ku#i^vxhj0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-#ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
-ALLOWED_HOSTS = ["mywebsite-i70y.onrender.com"]
+#ALLOWED_HOSTS = ["mywebsite-i70y.onrender.com"]
 
 
 # Application definition
@@ -57,9 +57,16 @@ MIDDLEWARE = [
 ]
 
 # Emails will print in the terminal instead of being sent
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
+EMAIL_HOST_USER = "mwendaalexis@gmail.com"
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 ROOT_URLCONF = 'Django_Portfolio_AlexMwenda.urls'
 

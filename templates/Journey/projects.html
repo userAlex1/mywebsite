@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}
+Software Projects | Alex Mwenda
+{% endblock %}
+
+{% block content %}
+
+<section class="inner-page">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Software Projects</h2>
+        </div>
+
+        <p>
+            I have worked on a range of software projects using technologies
+            such as Python, Django, Flask, PHP, MySQL, PostgreSQL, HTML, CSS,
+            JavaScript, and Bootstrap.
+        </p>
+
+        <p>
+            My projects include e-commerce applications, school management
+            systems, portfolio websites, and other practical web applications.
+            These projects have helped me strengthen my skills in application
+            development, databases, APIs, authentication, deployment, and
+            problem solving.
+        </p>
+
+        <h3 class="mt-4">Featured Projects</h3>
+
+        <div class="row mt-3">
+
+            <!-- Shoe Shop -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">StepUp Shoes</h4>
+
+                        <p class="card-text">
+                            An e-commerce shoe shop application where customers
+                            can browse products, add items to a cart, provide
+                            delivery details, and proceed through the checkout
+                            process.
+                        </p>
+
+                        <p>
+                            <strong>Technologies:</strong>
+                            Python, Django, SQLite, Bootstrap, HTML, CSS,
+                            JavaScript
+                        </p>
+
+                        <a href="https://shoeshop-tau-five.vercel.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-primary">
+                            View Live Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ruby Crest -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Ruby Crest School</h4>
+
+                        <p class="card-text">
+                            A school website and management project developed
+                            to provide an online platform for presenting school
+                            information and supporting different school
+                            services.
+                        </p>
+
+                        <p>
+                            <strong>Technologies:</strong>
+                            Python, Flask, PostgreSQL, SQLAlchemy, Bootstrap,
+                            HTML, CSS, JavaScript
+                        </p>
+
+                        <a href="https://rubycrest.onrender.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-primary">
+                            View Live Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-4">
+
+            <h3>More Projects & Source Code</h3>
+
+            <p>
+                I continue to build and experiment with different software
+                projects. My GitHub profile contains additional projects,
+                source code, and examples of my development work.
+            </p>
+
+            <a href="https://github.com/userAlex1"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-dark">
+                <i class="bi bi-github"></i>
+                View My GitHub
+            </a>
+
+        </div>
+
+        <div class="mt-4">
+
+            <a href="{% url 'home' %}#portfolio" class="btn btn-outline-primary">
+                Back to Portfolio
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

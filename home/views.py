@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from datetime import date
 from django.core.mail import send_mail
 from django.contrib import messages
-from .models import Home
+from .models import Home 
 
 # Create your views here.
 
@@ -15,6 +15,21 @@ def home(request):
 
 def project(request):
     return render(request, 'project.html')
+
+def journey_university(request):
+    return render(request, "journey/university.html")
+
+
+def journey_python(request):
+    return render(request, "journey/python.html")
+
+
+def journey_django(request):
+    return render(request, "journey/django.html")
+
+
+def journey_projects(request):
+    return render(request, "journey/projects.html")
 
 def project_index(request):
     return render(request, 'project_index.html')
@@ -39,8 +54,8 @@ def contact(request):
             send_mail(
                 subject,
                 message,
-                "noreply@example.com",
-                ["admin@example.com"],
+                "mwendaalexis@gmail.com",
+                ["mwendaalexis@gmail.com"],
                 fail_silently=False  # Set to False for debugging
             )
             messages.success(request, "Your message has been sent!")

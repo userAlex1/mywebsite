@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="inner-page">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Django</h2>
+        </div>
+
+        <p>
+            After developing my Python skills, I focused on Django as my
+            primary web framework. Django allowed me to apply Python to
+            building complete, database-driven web applications.
+        </p>
+
+        <p>
+            I have continued developing my understanding of Django through
+            practical projects, working with models, views, templates, URLs,
+            authentication, databases, forms, and application logic.
+        </p>
+
+        <a href="{% url 'home' %}#facts" class="btn btn-primary">
+            Back to My Journey
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

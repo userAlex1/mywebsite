@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="inner-page">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>University &amp; IT</h2>
+        </div>
+
+        <p>
+            My journey into technology began at university, where I studied
+            Information Technology. This gave me a strong foundation in
+            computing, programming, databases, software development, and
+            problem solving.
+        </p>
+
+        <p>
+            My university experience introduced me to different areas of
+            information technology and helped me discover my interest in
+            software development.
+        </p>
+
+        <a href="{% url 'home' %}#facts" class="btn btn-primary">
+            Back to My Journey
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}
