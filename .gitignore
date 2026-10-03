@@ -33,3 +33,7 @@ media/
 
 # Secrets
 secrets.json
+.vercel
+
+.env.*
+node_modules/
